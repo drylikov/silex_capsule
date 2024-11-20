@@ -1,4 +1,4 @@
-# Silex Capsule Service Provider
+# Silex Capsule Service Provider.
 
 _Note: This repository is no longer maintained, as the Silex has ended in favour of Symfony 4 Flex._
 
@@ -13,7 +13,7 @@ In order to use the service provider you'll need to be running **PHP 5.5.9+**
 The best way to install the service provider is using [Composer](https://getcomposer.org):
 
 ````shell
-composer require ziadoz/silex-capsule:2.*
+composer require drylikov/silex-capsule:2.*
 ````
 
 Alternatively, you can add it directly to your `composer.json` file:
@@ -21,7 +21,7 @@ Alternatively, you can add it directly to your `composer.json` file:
 ````json
 {
     "require": {
-        "ziadoz/silex-capsule": "2.*"
+        "drylikov/silex_capsule": "2.*"
     }
 }
 ````
@@ -34,7 +34,7 @@ To use it in your application just register the service provider with Silex:
 <?php
 $app = new Silex\Application;
 
-$app->register(new Ziadoz\Silex\Provider\CapsuleServiceProvider, [
+$app->register(new drylikov\Silex\Provider\CapsuleServiceProvider, [
     'capsule.connection' => [
         'driver'    => 'mysql',
         'host'      => 'localhost',
@@ -119,7 +119,7 @@ You can setup multiple connections and even caching with the service provider; s
 <?php
 $app = new Silex\Application;
 
-$app->register(new Ziadoz\Silex\Provider\CapsuleServiceProvider, [
+$app->register(new drylikov\Silex\Provider\CapsuleServiceProvider, [
     // Connections
     'capsule.connections' => [
         'default' => [
@@ -191,7 +191,7 @@ The following is a full example of all the available options that you can pass t
 <?php
 $app = new Silex\Application;
 
-$app->register(new Ziadoz\Silex\Provider\CapsuleServiceProvider, [
+$app->register(new drylikov\Silex\Provider\CapsuleServiceProvider, [
     // Multiple Connections
     'capsule.connections' => [
         'default' => [
